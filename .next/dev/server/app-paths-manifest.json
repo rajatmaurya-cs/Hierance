@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/auth/createaccount/page": "app/auth/createaccount/page.js",
+  "/auth/page": "app/auth/page.js",
+  "/candidate/[username]/apply/[slug]/fillform/page": "app/candidate/[username]/apply/[slug]/fillform/page.js",
+  "/candidate/[username]/apply/[slug]/page": "app/candidate/[username]/apply/[slug]/page.js",
+  "/candidate/[username]/home/page": "app/candidate/[username]/home/page.js",
+  "/dashboard/recruiter/jobs/[jobId]/applicants/[applicantId]/page": "app/dashboard/recruiter/jobs/[jobId]/applicants/[applicantId]/page.js",
+  "/dashboard/recruiter/jobs/[jobId]/applicants/page": "app/dashboard/recruiter/jobs/[jobId]/applicants/page.js",
+  "/dashboard/recruiter/jobs/[jobId]/page": "app/dashboard/recruiter/jobs/[jobId]/page.js",
+  "/dashboard/recruiter/jobs/page": "app/dashboard/recruiter/jobs/page.js",
+  "/dashboard/recruiter/page": "app/dashboard/recruiter/page.js",
+  "/dashboard/recruiter/profile/page": "app/dashboard/recruiter/profile/page.js",
+  "/jobs/[jobId]/page": "app/jobs/[jobId]/page.js",
+  "/jobs/page": "app/jobs/page.js",
+  "/page": "app/page.js"
+}

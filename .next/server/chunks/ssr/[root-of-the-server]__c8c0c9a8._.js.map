@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/admin/subscriptions/page.tsx"],"sourcesContent":["import { redirect } from \"next/navigation\";\n\nexport default function SubscriptionsPage() {\n  redirect(\"/admin/subscriptions/revenue\");\n}\n"],"names":[],"mappings":"2XAAA,EAAA,CAAA,CAAA,OAAA,IAAA,EAAA,EAAA,CAAA,CAAA,OAEe,SAAS,IACtB,CAAA,EAAA,EAAA,QAAA,AAAQ,EAAC,+BACX"}

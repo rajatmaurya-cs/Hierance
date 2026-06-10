@@ -1,0 +1,5 @@
+module.exports=[40666,a=>{"use strict";var b=a.i(87924),c=a.i(50944);let d=[{label:"Overview",path:"/dashboard/recruiter/subscriptions"},{label:"Usage",path:"/dashboard/recruiter/subscriptions/plan-usage"},{label:"Billing",path:"/dashboard/recruiter/subscriptions/billing-history"},{label:"Upgrade Plans",path:"/dashboard/recruiter/subscriptions/upgrade-plan"},{label:"Payment Method",path:"/dashboard/recruiter/subscriptions/payment-methods"}];a.s(["default",0,()=>{let a=(0,c.usePathname)(),e=(0,c.useRouter)();return(0,b.jsx)("div",{className:"w-full flex items-center gap-3",children:d.map(c=>{let d=a===c.path;return(0,b.jsx)("button",{onClick:()=>e.push(c.path),className:`text-sm font-medium rounded-md px-4 py-2 transition
+              ${d?"bg-slate-900 text-white":"bg-slate-200/60 text-slate-600 hover:bg-slate-300/70"}
+            `,children:c.label},c.label)})})}])}];
+
+//# sourceMappingURL=app_dashboard_recruiter_subscriptions_components_SubscriptionTabs_tsx_0105a3a7._.js.map

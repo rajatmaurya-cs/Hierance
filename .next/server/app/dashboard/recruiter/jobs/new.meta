@@ -1,0 +1,18 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/dashboard/layout,_N_T_/dashboard/recruiter/layout,_N_T_/dashboard/recruiter/jobs/layout,_N_T_/dashboard/recruiter/jobs/new/layout,_N_T_/dashboard/recruiter/jobs/new/page,_N_T_/dashboard/recruiter/jobs/new"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/dashboard/recruiter/jobs/new/__PAGE__",
+    "/dashboard/recruiter/jobs/new",
+    "/dashboard/recruiter/jobs",
+    "/dashboard/recruiter",
+    "/dashboard",
+    "/_index",
+    "/_head"
+  ]
+}

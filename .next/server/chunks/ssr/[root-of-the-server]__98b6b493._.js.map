@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/candidate/%5Busername%5D/profile/page.tsx"],"sourcesContent":["export default function ProfilePage() {\n  return null;\n}\n"],"names":[],"mappings":"gWAAe,SAAS,IACtB,OAAO,IACT"}

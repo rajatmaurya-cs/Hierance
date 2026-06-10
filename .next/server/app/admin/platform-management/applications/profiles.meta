@@ -1,0 +1,18 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/platform-management/layout,_N_T_/admin/platform-management/applications/layout,_N_T_/admin/platform-management/applications/profiles/layout,_N_T_/admin/platform-management/applications/profiles/page,_N_T_/admin/platform-management/applications/profiles"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/platform-management/applications/profiles/__PAGE__",
+    "/admin/platform-management/applications/profiles",
+    "/admin/platform-management/applications",
+    "/admin/platform-management",
+    "/admin",
+    "/_index",
+    "/_head"
+  ]
+}

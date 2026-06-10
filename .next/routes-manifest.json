@@ -1,0 +1,551 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/admin/platform-management/applications/profiles/[applicationId]",
+      "regex": "^/admin/platform\\-management/applications/profiles/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPapplicationId": "nxtPapplicationId"
+      },
+      "namedRegex": "^/admin/platform\\-management/applications/profiles/(?<nxtPapplicationId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/applications/viewApplication/[applicationId]",
+      "regex": "^/admin/platform\\-management/applications/viewApplication/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPapplicationId": "nxtPapplicationId"
+      },
+      "namedRegex": "^/admin/platform\\-management/applications/viewApplication/(?<nxtPapplicationId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/companies/profiles/[companyId]",
+      "regex": "^/admin/platform\\-management/companies/profiles/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcompanyId": "nxtPcompanyId"
+      },
+      "namedRegex": "^/admin/platform\\-management/companies/profiles/(?<nxtPcompanyId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/companies/viewProfile/[companyId]",
+      "regex": "^/admin/platform\\-management/companies/viewProfile/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcompanyId": "nxtPcompanyId"
+      },
+      "namedRegex": "^/admin/platform\\-management/companies/viewProfile/(?<nxtPcompanyId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/jobs/details/[jobId]",
+      "regex": "^/admin/platform\\-management/jobs/details/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPjobId": "nxtPjobId"
+      },
+      "namedRegex": "^/admin/platform\\-management/jobs/details/(?<nxtPjobId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/jobs/profiles/[jobId]",
+      "regex": "^/admin/platform\\-management/jobs/profiles/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPjobId": "nxtPjobId"
+      },
+      "namedRegex": "^/admin/platform\\-management/jobs/profiles/(?<nxtPjobId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/subscriptions/plans/[planId]",
+      "regex": "^/admin/subscriptions/plans/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPplanId": "nxtPplanId"
+      },
+      "namedRegex": "^/admin/subscriptions/plans/(?<nxtPplanId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/users/job-seekers/profiles/[userId]",
+      "regex": "^/admin/users/job\\-seekers/profiles/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPuserId": "nxtPuserId"
+      },
+      "namedRegex": "^/admin/users/job\\-seekers/profiles/(?<nxtPuserId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/users/recruiters/profiles/[recruiterId]",
+      "regex": "^/admin/users/recruiters/profiles/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPrecruiterId": "nxtPrecruiterId"
+      },
+      "namedRegex": "^/admin/users/recruiters/profiles/(?<nxtPrecruiterId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/candidate/[username]",
+      "regex": "^/candidate/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPusername": "nxtPusername"
+      },
+      "namedRegex": "^/candidate/(?<nxtPusername>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/candidate/[username]/apply/[slug]",
+      "regex": "^/candidate/([^/]+?)/apply/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPusername": "nxtPusername",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/candidate/(?<nxtPusername>[^/]+?)/apply/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/candidate/[username]/apply/[slug]/fillform",
+      "regex": "^/candidate/([^/]+?)/apply/([^/]+?)/fillform(?:/)?$",
+      "routeKeys": {
+        "nxtPusername": "nxtPusername",
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/candidate/(?<nxtPusername>[^/]+?)/apply/(?<nxtPslug>[^/]+?)/fillform(?:/)?$"
+    },
+    {
+      "page": "/candidate/[username]/companies",
+      "regex": "^/candidate/([^/]+?)/companies(?:/)?$",
+      "routeKeys": {
+        "nxtPusername": "nxtPusername"
+      },
+      "namedRegex": "^/candidate/(?<nxtPusername>[^/]+?)/companies(?:/)?$"
+    },
+    {
+      "page": "/candidate/[username]/companies/[companyId]",
+      "regex": "^/candidate/([^/]+?)/companies/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPusername": "nxtPusername",
+        "nxtPcompanyId": "nxtPcompanyId"
+      },
+      "namedRegex": "^/candidate/(?<nxtPusername>[^/]+?)/companies/(?<nxtPcompanyId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/candidate/[username]/home",
+      "regex": "^/candidate/([^/]+?)/home(?:/)?$",
+      "routeKeys": {
+        "nxtPusername": "nxtPusername"
+      },
+      "namedRegex": "^/candidate/(?<nxtPusername>[^/]+?)/home(?:/)?$"
+    },
+    {
+      "page": "/candidate/[username]/jobs",
+      "regex": "^/candidate/([^/]+?)/jobs(?:/)?$",
+      "routeKeys": {
+        "nxtPusername": "nxtPusername"
+      },
+      "namedRegex": "^/candidate/(?<nxtPusername>[^/]+?)/jobs(?:/)?$"
+    },
+    {
+      "page": "/candidate/[username]/profile",
+      "regex": "^/candidate/([^/]+?)/profile(?:/)?$",
+      "routeKeys": {
+        "nxtPusername": "nxtPusername"
+      },
+      "namedRegex": "^/candidate/(?<nxtPusername>[^/]+?)/profile(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/jobs/[jobId]",
+      "regex": "^/dashboard/recruiter/jobs/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPjobId": "nxtPjobId"
+      },
+      "namedRegex": "^/dashboard/recruiter/jobs/(?<nxtPjobId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/jobs/[jobId]/applicants",
+      "regex": "^/dashboard/recruiter/jobs/([^/]+?)/applicants(?:/)?$",
+      "routeKeys": {
+        "nxtPjobId": "nxtPjobId"
+      },
+      "namedRegex": "^/dashboard/recruiter/jobs/(?<nxtPjobId>[^/]+?)/applicants(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/jobs/[jobId]/applicants/[applicantId]",
+      "regex": "^/dashboard/recruiter/jobs/([^/]+?)/applicants/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPjobId": "nxtPjobId",
+        "nxtPapplicantId": "nxtPapplicantId"
+      },
+      "namedRegex": "^/dashboard/recruiter/jobs/(?<nxtPjobId>[^/]+?)/applicants/(?<nxtPapplicantId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/jobs/category/[categoryID]",
+      "regex": "^/jobs/category/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcategoryID": "nxtPcategoryID"
+      },
+      "namedRegex": "^/jobs/category/(?<nxtPcategoryID>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/jobs/company/[companyName]",
+      "regex": "^/jobs/company/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcompanyName": "nxtPcompanyName"
+      },
+      "namedRegex": "^/jobs/company/(?<nxtPcompanyName>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/jobs/[jobId]",
+      "regex": "^/jobs/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPjobId": "nxtPjobId"
+      },
+      "namedRegex": "^/jobs/(?<nxtPjobId>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard",
+      "regex": "^/admin/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard/recruiter/analytics",
+      "regex": "^/admin/dashboard/recruiter/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard/recruiter/analytics(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard/recruiter/notifications",
+      "regex": "^/admin/dashboard/recruiter/notifications(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard/recruiter/notifications(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard/recruiter/overview",
+      "regex": "^/admin/dashboard/recruiter/overview(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard/recruiter/overview(?:/)?$"
+    },
+    {
+      "page": "/admin/dashboard/recruiter/revenue",
+      "regex": "^/admin/dashboard/recruiter/revenue(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/dashboard/recruiter/revenue(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/applications",
+      "regex": "^/admin/platform\\-management/applications(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/applications(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/applications/analytics",
+      "regex": "^/admin/platform\\-management/applications/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/applications/analytics(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/applications/profiles",
+      "regex": "^/admin/platform\\-management/applications/profiles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/applications/profiles(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/companies",
+      "regex": "^/admin/platform\\-management/companies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/companies(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/companies/analytics",
+      "regex": "^/admin/platform\\-management/companies/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/companies/analytics(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/companies/profiles",
+      "regex": "^/admin/platform\\-management/companies/profiles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/companies/profiles(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/jobs",
+      "regex": "^/admin/platform\\-management/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/jobs(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/jobs/analytics",
+      "regex": "^/admin/platform\\-management/jobs/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/jobs/analytics(?:/)?$"
+    },
+    {
+      "page": "/admin/platform-management/jobs/profiles",
+      "regex": "^/admin/platform\\-management/jobs/profiles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/platform\\-management/jobs/profiles(?:/)?$"
+    },
+    {
+      "page": "/admin/settings",
+      "regex": "^/admin/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/settings(?:/)?$"
+    },
+    {
+      "page": "/admin/subscriptions",
+      "regex": "^/admin/subscriptions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/subscriptions(?:/)?$"
+    },
+    {
+      "page": "/admin/subscriptions/plans",
+      "regex": "^/admin/subscriptions/plans(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/subscriptions/plans(?:/)?$"
+    },
+    {
+      "page": "/admin/subscriptions/revenue",
+      "regex": "^/admin/subscriptions/revenue(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/subscriptions/revenue(?:/)?$"
+    },
+    {
+      "page": "/admin/users/admin-management",
+      "regex": "^/admin/users/admin\\-management(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users/admin\\-management(?:/)?$"
+    },
+    {
+      "page": "/admin/users/job-seekers",
+      "regex": "^/admin/users/job\\-seekers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users/job\\-seekers(?:/)?$"
+    },
+    {
+      "page": "/admin/users/job-seekers/analytics",
+      "regex": "^/admin/users/job\\-seekers/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users/job\\-seekers/analytics(?:/)?$"
+    },
+    {
+      "page": "/admin/users/job-seekers/profiles",
+      "regex": "^/admin/users/job\\-seekers/profiles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users/job\\-seekers/profiles(?:/)?$"
+    },
+    {
+      "page": "/admin/users/recruiters",
+      "regex": "^/admin/users/recruiters(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users/recruiters(?:/)?$"
+    },
+    {
+      "page": "/admin/users/recruiters/analytics",
+      "regex": "^/admin/users/recruiters/analytics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users/recruiters/analytics(?:/)?$"
+    },
+    {
+      "page": "/admin/users/recruiters/profiles",
+      "regex": "^/admin/users/recruiters/profiles(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users/recruiters/profiles(?:/)?$"
+    },
+    {
+      "page": "/auth",
+      "regex": "^/auth(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth(?:/)?$"
+    },
+    {
+      "page": "/auth/createaccount",
+      "regex": "^/auth/createaccount(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/createaccount(?:/)?$"
+    },
+    {
+      "page": "/auth/forgotpassword",
+      "regex": "^/auth/forgotpassword(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/forgotpassword(?:/)?$"
+    },
+    {
+      "page": "/companies",
+      "regex": "^/companies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/companies(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter",
+      "regex": "^/dashboard/recruiter(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/jobs",
+      "regex": "^/dashboard/recruiter/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/jobs(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/jobs/new",
+      "regex": "^/dashboard/recruiter/jobs/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/jobs/new(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/profile",
+      "regex": "^/dashboard/recruiter/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/profile(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/rewards",
+      "regex": "^/dashboard/recruiter/rewards(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/rewards(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/settings",
+      "regex": "^/dashboard/recruiter/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/settings(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/subscriptions",
+      "regex": "^/dashboard/recruiter/subscriptions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/subscriptions(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/subscriptions/billing-history",
+      "regex": "^/dashboard/recruiter/subscriptions/billing\\-history(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/subscriptions/billing\\-history(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/subscriptions/payment-methods",
+      "regex": "^/dashboard/recruiter/subscriptions/payment\\-methods(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/subscriptions/payment\\-methods(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/subscriptions/plan-usage",
+      "regex": "^/dashboard/recruiter/subscriptions/plan\\-usage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/subscriptions/plan\\-usage(?:/)?$"
+    },
+    {
+      "page": "/dashboard/recruiter/subscriptions/upgrade-plan",
+      "regex": "^/dashboard/recruiter/subscriptions/upgrade\\-plan(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/recruiter/subscriptions/upgrade\\-plan(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/jobs",
+      "regex": "^/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/jobs(?:/)?$"
+    },
+    {
+      "page": "/legal/cookies",
+      "regex": "^/legal/cookies(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/legal/cookies(?:/)?$"
+    },
+    {
+      "page": "/legal/help",
+      "regex": "^/legal/help(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/legal/help(?:/)?$"
+    },
+    {
+      "page": "/legal/privacy",
+      "regex": "^/legal/privacy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/legal/privacy(?:/)?$"
+    },
+    {
+      "page": "/legal/refund-policy",
+      "regex": "^/legal/refund\\-policy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/legal/refund\\-policy(?:/)?$"
+    },
+    {
+      "page": "/legal/terms",
+      "regex": "^/legal/terms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/legal/terms(?:/)?$"
+    },
+    {
+      "page": "/prices",
+      "regex": "^/prices(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/prices(?:/)?$"
+    },
+    {
+      "page": "/services",
+      "regex": "^/services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

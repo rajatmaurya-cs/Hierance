@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/dashboard/layout,_N_T_/dashboard/recruiter/layout,_N_T_/dashboard/recruiter/subscriptions/layout,_N_T_/dashboard/recruiter/subscriptions/page,_N_T_/dashboard/recruiter/subscriptions"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/dashboard/recruiter/subscriptions/__PAGE__",
+    "/dashboard/recruiter/subscriptions",
+    "/dashboard/recruiter",
+    "/dashboard",
+    "/_index",
+    "/_head"
+  ]
+}

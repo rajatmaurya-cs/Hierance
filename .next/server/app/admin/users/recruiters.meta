@@ -1,0 +1,19 @@
+{
+  "status": 307,
+  "headers": {
+    "location": "/admin/users/recruiters/analytics",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/users/layout,_N_T_/admin/users/recruiters/layout,_N_T_/admin/users/recruiters/page,_N_T_/admin/users/recruiters"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/users/recruiters/__PAGE__",
+    "/admin/users/recruiters",
+    "/admin/users",
+    "/admin",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/admin/layout,_N_T_/admin/users/layout,_N_T_/admin/users/recruiters/layout,_N_T_/admin/users/recruiters/profiles/layout,_N_T_/admin/users/recruiters/profiles/page,_N_T_/admin/users/recruiters/profiles"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/admin/users/recruiters/profiles/__PAGE__",
+    "/admin/users/recruiters/profiles",
+    "/admin/users/recruiters",
+    "/admin/users",
+    "/admin",
+    "/_index",
+    "/_head"
+  ]
+}
