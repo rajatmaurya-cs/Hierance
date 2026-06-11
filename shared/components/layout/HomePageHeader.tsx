@@ -234,7 +234,7 @@ export default function HomePageHeader() {
               <div className="flex flex-col gap-1">
                 <p className="text-[10px] font-semibold text-indigo-400/80 uppercase tracking-[0.18em] mb-3 pl-3">Support</p>
                 
-                <Link href="/legal/contact" className="group flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-indigo-50/50 transition-all duration-200">
+                <Link href="/contact" className="group flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-indigo-50/50 transition-all duration-200">
                   <div className="w-9 h-9 rounded-lg bg-indigo-50 flex items-center justify-center shrink-0 group-hover:bg-indigo-100/70 transition-colors mt-0.5">
                     <Mail size={16} className="text-indigo-500" />
                   </div>
@@ -362,7 +362,7 @@ export default function HomePageHeader() {
                 Bangalore, India & SF, CA
               </div>
               <Link 
-                href="/legal/contact" 
+                href="/contact" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-2 block text-center py-2.5 bg-indigo-600 text-white hover:bg-indigo-700 rounded-xl font-semibold text-[11px] uppercase tracking-wider transition-colors"
               >

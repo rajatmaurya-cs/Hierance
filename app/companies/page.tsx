@@ -148,20 +148,7 @@ function CompaniesContent() {
               </button>
             </div>
 
-            {/* Keyword Search */}
-            <div className="mb-8">
-              <h3 className="text-[10px] font-semibold text-slate-400 mb-4 uppercase tracking-[0.2em]">Keywords</h3>
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
-                <input 
-                  type="text" 
-                  placeholder="Company name or industry..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-100 rounded-xl text-sm focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 outline-none transition-all font-medium text-slate-700"
-                />
-              </div>
-            </div>
+
 
             {/* Company Type */}
             <div className="mb-8">
@@ -223,20 +210,7 @@ function CompaniesContent() {
               </div>
             </div>
 
-            {/* Location */}
-            <div className="mb-8">
-              <h3 className="text-[10px] font-semibold text-slate-400 mb-4 uppercase tracking-[0.2em]">Location</h3>
-              <div className="relative">
-                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
-                <input 
-                  type="text" 
-                  placeholder="Search location..."
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-100 rounded-xl text-sm focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 outline-none transition-all"
-                />
-              </div>
-            </div>
+
 
             {/* Company Size */}
             <div className="mb-10">
@@ -277,6 +251,70 @@ function CompaniesContent() {
                 <button className="p-2 text-slate-400 hover:text-slate-600"><LayoutGrid size={18} /></button>
                 <button className="p-2 bg-indigo-50 text-indigo-600 rounded-lg"><List size={18} /></button>
               </div>
+            </div>
+          </div>
+
+          {/* Top Search Input and Locations Selector */}
+          <div className="mb-8 space-y-4">
+            <div className="relative w-full max-w-sm">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+              <input 
+                type="text" 
+                placeholder="Search company or industry..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-11 pr-10 py-3 bg-white border border-slate-200/80 rounded-2xl text-sm focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 outline-none transition-all font-medium text-slate-700 shadow-sm"
+              />
+              {searchQuery && (
+                <button 
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition"
+                  type="button"
+                >
+                  <X size={14} />
+                </button>
+              )}
+            </div>
+
+            {/* Locations List */}
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider mr-2">Locations:</span>
+              {[
+                { label: "All Locations", value: "" },
+                { label: "Remote", value: "Remote" },
+                { label: "New York, NY", value: "New York" },
+                { label: "San Francisco, CA", value: "San Francisco" },
+                { label: "London, UK", value: "London" },
+                { label: "Bangalore, IN", value: "Bangalore" },
+                { label: "Delhi NCR", value: "Delhi" },
+                { label: "Mumbai, IN", value: "Mumbai" },
+                { label: "Hyderabad, IN", value: "Hyderabad" },
+                { label: "Pune, IN", value: "Pune" },
+                { label: "Chennai, IN", value: "Chennai" }
+              ].map((loc) => {
+                const isActive = (loc.value === "" && location === "") || (loc.value !== "" && location.toLowerCase().includes(loc.value.toLowerCase()));
+                return (
+                  <button
+                    key={loc.label}
+                    type="button"
+                    onClick={() => {
+                      if (loc.value === "") {
+                        setLocation("");
+                      } else {
+                        const isCurrentlyActive = location.toLowerCase().includes(loc.value.toLowerCase());
+                        setLocation(isCurrentlyActive ? "" : loc.value);
+                      }
+                    }}
+                    className={`px-4 py-2 rounded-xl text-xs font-medium transition-all cursor-pointer ${
+                      isActive 
+                        ? 'bg-indigo-600 text-white shadow-md shadow-indigo-100 ring-1 ring-indigo-500' 
+                        : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50'
+                    }`}
+                  >
+                    {loc.label}
+                  </button>
+                );
+              })}
             </div>
           </div>
 

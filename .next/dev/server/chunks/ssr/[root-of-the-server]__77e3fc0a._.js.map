@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":["file:///Users/rajatmaurya/Documents/Hierance/fullstack/frontend/app/admin/users/job-seekers/page.tsx"],"sourcesContent":["import { redirect } from \"next/navigation\";\n\nexport default function JobSeekersPage() {\n  redirect(\"/admin/users/job-seekers/analytics\");\n}\n"],"names":[],"mappings":";;;;AAAA;AAAA;;AAEe,SAAS;IACtB,IAAA,iMAAQ,EAAC;AACX"}}]
-}
