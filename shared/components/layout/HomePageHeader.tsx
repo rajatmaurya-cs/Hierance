@@ -17,7 +17,7 @@ import {
   Cpu,
   CheckCircle2,
   ArrowUpRight,
-  IndianRupee
+  CreditCard
 } from "lucide-react";
 
 export default function HomePageHeader() {
@@ -69,18 +69,21 @@ export default function HomePageHeader() {
               { label: "Jobs", href: "/jobs", icon: Briefcase },
               { label: "Companies", href: "/companies", icon: Building2 },
               { label: "Services", href: "/services", icon: Globe },
-              { label: "Prices", href: "/prices", icon: IndianRupee },
-            ].map((item) => (
-              <Link 
-                key={item.label} 
-                href={item.href} 
-                onMouseEnter={() => setActiveMenu(null)}
-                className="group flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-indigo-900 transition-all duration-200 px-3 py-1.5 rounded-full hover:bg-indigo-50/70"
-              >
-                <item.icon size={14} className="text-indigo-400 group-hover:text-indigo-600 transition-colors" />
-                {item.label}
-              </Link>
-            ))}
+              { label: "Plans", href: "/prices", icon: CreditCard },
+            ].map((item) => {
+              const IconComponent = item.icon;
+              return (
+                <Link 
+                  key={item.label} 
+                  href={item.href} 
+                  onMouseEnter={() => setActiveMenu(null)}
+                  className="group flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-indigo-900 transition-all duration-200 px-3 py-1.5 rounded-full hover:bg-indigo-50/70"
+                >
+                  {IconComponent && <IconComponent size={14} className="text-indigo-400 group-hover:text-indigo-600 transition-colors" />}
+                  {item.label}
+                </Link>
+              );
+            })}
 
             {/* COMPANY NAV LINK */}
             <div 
@@ -318,18 +321,21 @@ export default function HomePageHeader() {
             { label: "Jobs", href: "/jobs", icon: Briefcase },
             { label: "Companies", href: "/companies", icon: Building2 },
             { label: "Services", href: "/services", icon: Globe },
-            { label: "Prices", href: "/prices", icon: IndianRupee },
-          ].map((item) => (
-            <Link 
-              key={item.label} 
-              href={item.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-3 text-base font-semibold text-slate-800 hover:text-indigo-700 py-1 transition-colors"
-            >
-              <item.icon size={18} className="text-indigo-400" />
-              {item.label}
-            </Link>
-          ))}
+            { label: "Plans", href: "/prices", icon: CreditCard },
+          ].map((item) => {
+            const IconComponent = item.icon;
+            return (
+              <Link 
+                key={item.label} 
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-3 text-base font-semibold text-slate-800 hover:text-indigo-700 py-1 transition-colors"
+              >
+                {IconComponent && <IconComponent size={18} className="text-indigo-400" />}
+                {item.label}
+              </Link>
+            );
+          })}
           
           <div className="h-px bg-indigo-100/60 my-2" />
 
