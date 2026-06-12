@@ -40,7 +40,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
 
 
 
@@ -49,25 +49,25 @@ export default function HomePage() {
 
 
       {/* ================= PREMIUM SERVICES BANNER ================= */}
-      <section className="pb-0 px-6 mt-[72px]">
+      {/* <section className="pb-0 px-6 mt-[72px]">
         <div className="max-w-7xl mx-auto">
           <PremiumServicesAd />
         </div>
-      </section>
+      </section> */}
 
       <main>
         {/* ================= HERO SECTION ================= */}
-        <section className="relative isolate pt-0 pb-4 overflow-hidden">
+        <section className="relative isolate pt-28 pb-16">
       
-          <div className="absolute inset-0 -z-10 overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-indigo-50/50 via-purple-50/20 to-white">
        
-            <div className="absolute top-[-20%] left-[-10%] h-[500px] w-[500px] rounded-full bg-indigo-200/40 blur-[140px] animate-pulse" />
-
+            <div className="absolute top-0 left-0 h-[450px] w-[450px] rounded-full bg-indigo-200/25 blur-[120px] animate-pulse" />
+ 
          
-            <div className="absolute bottom-[-20%] right-[-10%] h-[500px] w-[500px] rounded-full bg-purple-200/40 blur-[140px] animate-pulse delay-700" />
-
+            <div className="absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-purple-200/25 blur-[120px] animate-pulse delay-700" />
+ 
           
-            <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-100/40 blur-[120px]" />
+            <div className="absolute left-1/2 top-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-100/20 blur-[100px]" />
             
           </div>
           <LandingHeader />
