@@ -25,6 +25,7 @@ function CompaniesContent() {
 
   // Filter States
   const [searchQuery, setSearchQuery] = useState(initialQuery);
+  const [inputVal, setInputVal] = useState(initialQuery);
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
   const [minRating, setMinRating] = useState<number>(1);
@@ -104,7 +105,10 @@ function CompaniesContent() {
     if (type === "type") setSelectedTypes(prev => prev.filter(t => t !== value));
     if (type === "industry") setSelectedIndustries(prev => prev.filter(i => i !== value));
     if (type === "location") setLocation("");
-    if (type === "search") setSearchQuery("");
+    if (type === "search") {
+      setSearchQuery("");
+      setInputVal("");
+    }
     setCurrentPage(1);
   };
 
@@ -134,6 +138,7 @@ function CompaniesContent() {
                 type="button"
                 onClick={() => {
                   setSearchQuery("");
+                  setInputVal("");
                   setSelectedTypes([]);
                   setSelectedIndustries([]);
                   setMinRating(1);
@@ -256,25 +261,42 @@ function CompaniesContent() {
 
           {/* Top Search Input and Locations Selector */}
           <div className="mb-8 space-y-4">
-            <div className="relative w-full max-w-sm">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-              <input 
-                type="text" 
-                placeholder="Search company or industry..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-11 pr-10 py-3 bg-white border border-slate-200/80 rounded-2xl text-sm focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 outline-none transition-all font-medium text-slate-700 shadow-sm"
-              />
-              {searchQuery && (
-                <button 
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition"
-                  type="button"
-                >
-                  <X size={14} />
-                </button>
-              )}
-            </div>
+            <form 
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSearchQuery(inputVal);
+              }}
+              className="relative w-full max-w-md flex items-center bg-white border border-slate-200/80 rounded-2xl shadow-sm p-1.5 focus-within:ring-2 focus-within:ring-indigo-500/20 focus-within:border-indigo-500 transition-all"
+            >
+              <div className="relative flex-grow flex items-center">
+                <Search className="absolute left-4 text-slate-400" size={18} />
+                <input 
+                  type="text" 
+                  placeholder="Search company or industry..."
+                  value={inputVal}
+                  onChange={(e) => setInputVal(e.target.value)}
+                  className="w-full pl-11 pr-10 py-2 bg-transparent border-none outline-none text-sm font-medium text-slate-700 placeholder:text-slate-400"
+                />
+                {inputVal && (
+                  <button 
+                    onClick={() => {
+                      setInputVal("");
+                      setSearchQuery("");
+                    }}
+                    className="absolute right-3 p-1 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition"
+                    type="button"
+                  >
+                    <X size={14} />
+                  </button>
+                )}
+              </div>
+              <button
+                type="submit"
+                className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white rounded-xl text-xs font-semibold uppercase tracking-wider transition-all"
+              >
+                Search
+              </button>
+            </form>
 
             {/* Locations List */}
             <div className="flex flex-wrap items-center gap-2">
@@ -360,6 +382,7 @@ function CompaniesContent() {
               <button 
                 onClick={() => {
                   setSearchQuery("");
+                  setInputVal("");
                   setSelectedTypes([]);
                   setSelectedIndustries([]);
                   setMinRating(1);
@@ -434,6 +457,7 @@ function CompaniesContent() {
                 <button 
                   onClick={() => {
                     setSearchQuery("");
+                    setInputVal("");
                     setSelectedTypes([]);
                     setSelectedIndustries([]);
                     setMinRating(1);

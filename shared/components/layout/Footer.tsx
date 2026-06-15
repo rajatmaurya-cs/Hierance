@@ -92,7 +92,7 @@ const Footer = ({ username }: FooterProps) => {
                 { label: "Privacy Policy", href: "/legal/privacy" },
                 { label: "Terms of Service", href: "/legal/terms" },
                 { label: "Cookie Policy", href: "/legal/cookies" },
-                { label: "Help Center", href: "/legal/help" },
+                { label: "Help Center", href: "/help" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link 
