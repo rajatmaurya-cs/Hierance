@@ -77,7 +77,7 @@ const RecruiterPageLayout = ({ children }: LayoutProps) => {
   const pathname = usePathname();
 
   return (
-    <section className="w-full bg-[#F8FAFC] min-h-screen flex font-jakarta">
+    <section className="w-full bg-[#F8FAFC] min-h-screen flex font-primary">
       {/* ================= SIDEBAR ================= */}
       <aside className="w-72 bg-white/70 backdrop-blur-2xl border-r border-slate-200/50 fixed left-0 top-0 h-screen flex flex-col z-50">
         

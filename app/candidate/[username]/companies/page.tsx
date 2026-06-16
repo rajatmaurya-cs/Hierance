@@ -57,10 +57,10 @@ export default function CompaniesPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
         <div>
-          <h1 className="text-2xl font-semibold text-slate-800 tracking-tight font-inter">
+          <h1 className="text-2xl font-semibold text-slate-800 tracking-tight font-primary">
             Explore Companies
           </h1>
-          <p className="text-sm text-slate-500 mt-1 font-inter">
+          <p className="text-sm text-slate-500 mt-1 font-primary">
             {filteredCompanies.length} companies hiring now
           </p>
         </div>
@@ -85,8 +85,8 @@ export default function CompaniesPage() {
         ) : (
           <div className="text-center py-20 bg-white rounded-xl border border-dashed border-slate-200">
             <div className="text-3xl mb-3">🏢</div>
-            <h3 className="text-base font-semibold text-slate-700 font-inter">No companies found</h3>
-            <p className="text-sm text-slate-400 mt-1 font-inter">
+            <h3 className="text-base font-semibold text-slate-700 font-primary">No companies found</h3>
+            <p className="text-sm text-slate-400 mt-1 font-primary">
               Try adjusting your filters to find more organizations.
             </p>
           </div>
@@ -99,7 +99,7 @@ export default function CompaniesPage() {
           <button
             onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
             disabled={currentPage === 1}
-            className="px-4 py-2 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-500 hover:bg-slate-50 disabled:opacity-30 transition font-inter"
+            className="px-4 py-2 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-500 hover:bg-slate-50 disabled:opacity-30 transition font-primary"
           >
             Previous
           </button>
@@ -109,7 +109,7 @@ export default function CompaniesPage() {
               <button
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
-                className={`w-8 h-8 rounded-lg text-xs font-semibold transition font-inter ${
+                className={`w-8 h-8 rounded-lg text-xs font-semibold transition font-primary ${
                   currentPage === i + 1
                     ? "bg-slate-900 text-white"
                     : "bg-white border border-slate-200 text-slate-500 hover:bg-slate-50"
@@ -123,7 +123,7 @@ export default function CompaniesPage() {
           <button
             onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
             disabled={currentPage === totalPages}
-            className="px-4 py-2 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-500 hover:bg-slate-50 disabled:opacity-30 transition font-inter"
+            className="px-4 py-2 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-500 hover:bg-slate-50 disabled:opacity-30 transition font-primary"
           >
             Next
           </button>
@@ -134,7 +134,7 @@ export default function CompaniesPage() {
 }
 
 const StatItem = ({ label, value }: { label: string; value: number }) => (
-  <div className="text-center font-inter">
+  <div className="text-center font-primary">
     <p className="text-lg font-bold text-slate-800">{value}</p>
     <p className="text-[10px] font-medium uppercase tracking-wider text-slate-400">{label}</p>
   </div>

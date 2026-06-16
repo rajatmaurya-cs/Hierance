@@ -38,8 +38,8 @@ export default function CompanyJobsList({
   return (
     <div className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-sm font-semibold text-slate-700 font-inter">Current Openings</h2>
-        <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full font-inter">
+        <h2 className="text-sm font-semibold text-slate-700 font-primary">Current Openings</h2>
+        <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full font-primary">
           {jobs.length} positions
         </span>
       </div>
@@ -52,10 +52,10 @@ export default function CompanyJobsList({
               className="flex items-center gap-4 p-3 rounded-lg border border-slate-100 hover:border-slate-200 hover:bg-slate-50 transition group"
             >
               <div className="flex-1 min-w-0">
-                <h3 className="text-[14px] font-semibold text-slate-700 truncate group-hover:text-blue-600 transition font-inter">
+                <h3 className="text-[14px] font-semibold text-slate-700 truncate group-hover:text-blue-600 transition font-primary">
                   {job.title}
                 </h3>
-                <div className="flex flex-wrap items-center gap-3 mt-1 text-xs text-slate-400 font-inter">
+                <div className="flex flex-wrap items-center gap-3 mt-1 text-xs text-slate-400 font-primary">
                   <span className="flex items-center gap-1">
                     <Briefcase size={11} />
                     {job.experience}
@@ -73,14 +73,14 @@ export default function CompanyJobsList({
 
               <button
                 onClick={() => handleApply(job.title)}
-                className="flex-shrink-0 px-3.5 py-1.5 bg-slate-900 text-white text-xs font-semibold rounded-lg hover:bg-slate-800 transition font-inter"
+                className="flex-shrink-0 px-3.5 py-1.5 bg-slate-900 text-white text-xs font-semibold rounded-lg hover:bg-slate-800 transition font-primary"
               >
                 Apply
               </button>
             </div>
           ))
         ) : (
-          <div className="text-center py-12 text-sm text-slate-400 font-inter">
+          <div className="text-center py-12 text-sm text-slate-400 font-primary">
             No current openings at the moment.
           </div>
         )}

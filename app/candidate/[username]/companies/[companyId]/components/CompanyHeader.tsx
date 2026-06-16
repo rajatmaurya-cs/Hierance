@@ -43,7 +43,7 @@ export default function CompanyHeader({ company }: CompanyHeaderProps) {
         {/* Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <h1 className="text-xl font-semibold text-slate-800 tracking-tight font-inter">
+            <h1 className="text-xl font-semibold text-slate-800 tracking-tight font-primary">
               {company.name}
             </h1>
             {company.verified && (
@@ -51,7 +51,7 @@ export default function CompanyHeader({ company }: CompanyHeaderProps) {
             )}
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 mt-1.5 text-sm text-slate-500 font-inter">
+          <div className="flex flex-wrap items-center gap-4 mt-1.5 text-sm text-slate-500 font-primary">
             <span className="flex items-center gap-1.5">
               <Building2 size={14} className="text-slate-400" />
               {company.industry}
@@ -77,7 +77,7 @@ export default function CompanyHeader({ company }: CompanyHeaderProps) {
         <div className="flex items-center gap-2 w-full sm:w-auto">
           <button
             onClick={() => setIsFollowing(!isFollowing)}
-            className={`flex-1 sm:flex-none px-5 py-2 rounded-lg text-xs font-semibold transition font-inter ${
+            className={`flex-1 sm:flex-none px-5 py-2 rounded-lg text-xs font-semibold transition font-primary ${
               isFollowing
                 ? "bg-slate-100 text-slate-600 border border-slate-200"
                 : "bg-slate-900 text-white hover:bg-slate-800"

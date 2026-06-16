@@ -115,7 +115,7 @@ export default function JobDetailPage() {
   const similarJobs = JOBS.filter(j => j.category === job.category && j.id !== job.id).slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] font-inter">
+    <div className="min-h-screen bg-[#f8fafc] font-primary">
       <HomePageHeader />
 
       <main className="max-w-7xl mx-auto px-6 pt-32 pb-24">

@@ -51,13 +51,13 @@ export default function ProfileLayout() {
       <div className="max-w-5xl mx-auto px-4 py-10 md:px-8 space-y-6">
         {/* Page Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <h1 className="text-2xl font-bold text-slate-800 font-inter tracking-tight">
+          <h1 className="text-2xl font-bold text-slate-800 font-primary tracking-tight">
             Profile Settings
           </h1>
           <button
             onClick={handleGlobalSave}
             disabled={isSaving}
-            className={`px-5 py-2.5 rounded-xl text-[14px] font-semibold shadow-sm transition-all font-inter flex items-center justify-center gap-2 sm:w-auto w-full ${
+            className={`px-5 py-2.5 rounded-xl text-[14px] font-semibold shadow-sm transition-all font-primary flex items-center justify-center gap-2 sm:w-auto w-full ${
               saved
                 ? "bg-emerald-50 text-emerald-600 border border-emerald-200"
                 : "bg-indigo-600 text-white hover:bg-indigo-700 disabled:bg-indigo-400"

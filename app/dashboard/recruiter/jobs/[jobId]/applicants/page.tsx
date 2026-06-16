@@ -67,7 +67,7 @@ export default function JobApplicantsPage({
   const activeFiltersCount = (statusFilter !== "All" ? 1 : 0) + (roleFilter !== "All" ? 1 : 0);
 
   return (
-    <section className="space-y-10 pb-20 max-w-7xl mx-auto px-4 md:px-0 font-jakarta">
+    <section className="space-y-10 pb-20 max-w-7xl mx-auto px-4 md:px-0 font-primary">
       {/* ================= Header ================= */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>

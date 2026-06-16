@@ -383,7 +383,7 @@ export default function ApplicationDetailsPage({ params }: { params: Promise<{ a
       </main>
 
       <style jsx global>{`
-        body { font-family: 'Outfit', sans-serif; }
+        body { font-family: var(--font-primary); }
       `}</style>
     </div>
   );

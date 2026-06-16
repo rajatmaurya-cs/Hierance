@@ -16,7 +16,7 @@ export default function Stepper({ jobId }: StepperProps) {
   const isApplicants = pathname.includes("/applicants");
 
   return (
-    <div className="relative flex w-fit bg-slate-100/50 p-1 rounded-[1rem] border border-slate-200/50 font-jakarta">
+    <div className="relative flex w-fit bg-slate-100/50 p-1 rounded-[1rem] border border-slate-200/50 font-primary">
       {/* Active Background */}
       <motion.div
         layoutId="stepper-bg"

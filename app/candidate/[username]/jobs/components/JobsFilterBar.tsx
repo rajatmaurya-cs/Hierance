@@ -73,7 +73,7 @@ export default function JobsFilterBar({ onFilterChange }: Props) {
     <div className="w-full bg-white rounded-xl p-4 border border-slate-200 space-y-3">
       {/* Top Row */}
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 font-inter">
+        <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 font-primary">
           <SlidersHorizontal size={15} />
           Filters
         </div>

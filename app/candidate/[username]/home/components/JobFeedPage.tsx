@@ -19,17 +19,17 @@ const JobFeedPage = () => {
   return (
     <main className="min-w-0 flex-1 space-y-6 pb-10">
       <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-        <span className="inline-flex rounded-full bg-blue-50 px-3.5 py-1 text-[11px] font-semibold tracking-wide text-blue-600 uppercase font-inter">
+        <span className="inline-flex rounded-full bg-blue-50 px-3.5 py-1 text-[11px] font-semibold tracking-wide text-blue-600 uppercase font-primary">
           Personalized job matches
         </span>
 
-        <h1 className="mt-4 max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-slate-800 sm:text-3xl font-inter">
+        <h1 className="mt-4 max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-slate-800 sm:text-3xl font-primary">
           Find roles aligned with your{" "}
           <span className="text-blue-600">skills</span>, salary goals,
           and preferred location.
         </h1>
 
-        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-slate-500 font-inter">
+        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-slate-500 font-primary">
           A focused shortlist of opportunities based on your profile, not a
           noisy feed. Review matches, save strong options, and apply when
           the role feels right.
@@ -39,12 +39,12 @@ const JobFeedPage = () => {
           <div className="flex flex-col gap-3 sm:flex-row">
             <button
               onClick={() => redirect(`/candidate/${username}/jobs`)}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800 font-inter"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800 font-primary"
             >
               Browse jobs
               <FiArrowRight size={16} />
             </button>
-            <button className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50 font-inter">
+            <button className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50 font-primary">
               Update preferences
             </button>
           </div>
@@ -85,7 +85,7 @@ const JobFeedPage = () => {
 };
 
 const StatCard = ({ label, value }: { label: string; value: string }) => (
-  <div className="text-center font-inter">
+  <div className="text-center font-primary">
     <p className="text-lg font-bold text-slate-800">{value}</p>
     <p className="text-[10px] font-medium uppercase tracking-wider text-slate-400">
       {label}
@@ -134,7 +134,7 @@ const JobCard = ({ job }: { job: JobPreview }) => {
         <div className="flex min-w-0 items-center gap-4">
           <CompanyLogo src={job.companyLogo} alt={job.companyName} />
           <div className="min-w-0">
-            <h3 className="line-clamp-2 text-base font-bold leading-6 text-slate-950 font-jakarta">
+            <h3 className="line-clamp-2 text-base font-bold leading-6 text-slate-950 font-primary">
               {job.title}
             </h3>
             <p className="mt-1 truncate text-sm font-medium text-slate-500">
@@ -148,7 +148,7 @@ const JobCard = ({ job }: { job: JobPreview }) => {
         </button>
       </div>
 
-      <div className="mt-5 flex flex-wrap gap-2 text-[11px] font-medium text-slate-600 font-inter">
+      <div className="mt-5 flex flex-wrap gap-2 text-[11px] font-medium text-slate-600 font-primary">
         <Pill icon={<IoLocationOutline size={14} />} label={job.location} />
         <Pill icon={<BsBriefcase size={13} />} label={job.jobType} />
         <Pill label={job.salary} />

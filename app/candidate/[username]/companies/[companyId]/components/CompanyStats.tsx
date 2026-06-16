@@ -51,8 +51,8 @@ export default function CompanyStats({
             {stat.icon}
           </div>
           <div>
-            <p className="text-lg font-semibold text-slate-800 font-inter">{stat.value}</p>
-            <p className="text-[10px] font-medium text-slate-400 uppercase tracking-wider font-inter">{stat.label}</p>
+            <p className="text-lg font-semibold text-slate-800 font-primary">{stat.value}</p>
+            <p className="text-[10px] font-medium text-slate-400 uppercase tracking-wider font-primary">{stat.label}</p>
           </div>
         </div>
       ))}

@@ -66,11 +66,11 @@ const JobCard = ({
       {/* Main Content */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-3">
-          <h3 className="text-[15px] font-semibold text-slate-800 truncate group-hover:text-blue-600 transition font-inter">
+          <h3 className="text-[15px] font-semibold text-slate-800 truncate group-hover:text-blue-600 transition font-primary">
             {title}
           </h3>
           <div className="flex items-center gap-1.5 flex-shrink-0">
-            <span className="px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-semibold uppercase tracking-wide font-inter">
+            <span className="px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-semibold uppercase tracking-wide font-primary">
               {jobType}
             </span>
             <button
@@ -85,7 +85,7 @@ const JobCard = ({
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1.5 text-xs text-slate-500 font-inter">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1.5 text-xs text-slate-500 font-primary">
           <span className="flex items-center gap-1">
             <Briefcase size={12} className="text-slate-400" />
             {companyName}
@@ -109,7 +109,7 @@ const JobCard = ({
             {tags.slice(0, 4).map((tag, index) => (
               <span
                 key={index}
-                className="text-[10px] font-medium px-2 py-0.5 rounded bg-slate-100 text-slate-500 font-inter"
+                className="text-[10px] font-medium px-2 py-0.5 rounded bg-slate-100 text-slate-500 font-primary"
               >
                 {tag}
               </span>
@@ -121,7 +121,7 @@ const JobCard = ({
       {/* Action Button */}
       <button
         onClick={handleApply}
-        className="flex-shrink-0 px-4 py-2 bg-slate-900 text-white text-xs font-semibold rounded-lg hover:bg-slate-800 transition font-inter"
+        className="flex-shrink-0 px-4 py-2 bg-slate-900 text-white text-xs font-semibold rounded-lg hover:bg-slate-800 transition font-primary"
       >
         Apply
       </button>

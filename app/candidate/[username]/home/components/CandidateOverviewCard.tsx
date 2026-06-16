@@ -40,10 +40,10 @@ const CandidateOverviewCard = () => {
                 Open to work
               </span>
             </div>
-            <h3 className="truncate text-lg font-bold tracking-tight text-slate-950 font-jakarta">
+            <h3 className="truncate text-lg font-bold tracking-tight text-slate-950 font-primary">
               {candidate.fullName}
             </h3>
-            <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-slate-600 font-inter">
+            <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-slate-600 font-primary">
               {candidate.headline}
             </p>
             <p className="mt-2 text-xs font-medium text-slate-500">
@@ -72,7 +72,7 @@ const CandidateOverviewCard = () => {
             {topSkills.map((skill) => (
               <span
                 key={skill.id}
-                className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-[11px] font-medium text-slate-700 font-inter"
+                className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-[11px] font-medium text-slate-700 font-primary"
               >
                 {skill.name}
               </span>
@@ -140,7 +140,7 @@ const CandidateOverviewCard = () => {
 export default CandidateOverviewCard;
 
 const InfoRow = ({ label, value }: { label: string; value: string }) => (
-  <div className="flex items-center justify-between gap-4 font-inter">
+  <div className="flex items-center justify-between gap-4 font-primary">
     <span className="text-slate-500 text-xs">{label}</span>
     <span className="font-semibold text-slate-800 text-xs">{value}</span>
   </div>

@@ -28,7 +28,7 @@ const ProfileNavigation = ({ activeSection, setActiveSection }: Props) => {
               <button
                 key={link.key}
                 onClick={() => setActiveSection(link.key)}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-[14px] font-medium transition-all font-inter ${
+                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-[14px] font-medium transition-all font-primary ${
                   isActive
                     ? "bg-indigo-50 text-indigo-700 shadow-sm ring-1 ring-indigo-100/50"
                     : "text-slate-500 hover:bg-slate-50 hover:text-slate-700"

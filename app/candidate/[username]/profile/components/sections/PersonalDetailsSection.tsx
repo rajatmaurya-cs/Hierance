@@ -69,13 +69,13 @@ export default function PersonalDetailsSection() {
           <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center">
             <User size={16} className="text-indigo-600" />
           </div>
-          <h2 className="text-[15px] font-semibold text-slate-800 font-inter">Personal Details</h2>
+          <h2 className="text-[15px] font-semibold text-slate-800 font-primary">Personal Details</h2>
         </div>
 
         {!editMode ? (
           <button
             onClick={handleEdit}
-            className="flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-700 px-3 py-1.5 rounded-lg hover:bg-indigo-50 transition-colors font-inter"
+            className="flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-700 px-3 py-1.5 rounded-lg hover:bg-indigo-50 transition-colors font-primary"
           >
             <Pencil size={14} />
             Edit
@@ -84,14 +84,14 @@ export default function PersonalDetailsSection() {
           <div className="flex gap-2">
             <button
               onClick={handleCancel}
-              className="px-4 py-2 text-[13px] font-medium text-slate-600 hover:bg-slate-100 rounded-lg font-inter transition-colors flex items-center gap-1.5"
+              className="px-4 py-2 text-[13px] font-medium text-slate-600 hover:bg-slate-100 rounded-lg font-primary transition-colors flex items-center gap-1.5"
             >
               <X size={16} />
               Cancel
             </button>
             <button
               onClick={handleSave}
-              className="px-5 py-2 bg-indigo-600 text-white rounded-lg text-[13px] font-semibold hover:bg-indigo-700 shadow-sm transition-colors font-inter flex items-center gap-1.5"
+              className="px-5 py-2 bg-indigo-600 text-white rounded-lg text-[13px] font-semibold hover:bg-indigo-700 shadow-sm transition-colors font-primary flex items-center gap-1.5"
             >
               <Save size={16} />
               Save
@@ -105,7 +105,7 @@ export default function PersonalDetailsSection() {
         <Field icon={<User size={14} />} label="Gender">
           {editMode ? (
             <select
-              className="w-full border border-slate-200/80 rounded-lg px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-inter bg-white shadow-sm"
+              className="w-full border border-slate-200/80 rounded-lg px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-primary bg-white shadow-sm"
               value={tempDetails.gender}
               onChange={(e) => setTempDetails({ ...tempDetails, gender: e.target.value })}
             >
@@ -123,7 +123,7 @@ export default function PersonalDetailsSection() {
           {editMode ? (
             <input
               type="date"
-              className="w-full border border-slate-200/80 rounded-lg px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-inter bg-white shadow-sm"
+              className="w-full border border-slate-200/80 rounded-lg px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-primary bg-white shadow-sm"
               value={tempDetails.dob}
               onChange={(e) => setTempDetails({ ...tempDetails, dob: e.target.value })}
             />
@@ -139,7 +139,7 @@ export default function PersonalDetailsSection() {
         <Field icon={<Heart size={14} />} label="Marital Status">
           {editMode ? (
             <select
-              className="w-full border border-slate-200/80 rounded-lg px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-inter bg-white shadow-sm"
+              className="w-full border border-slate-200/80 rounded-lg px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-primary bg-white shadow-sm"
               value={tempDetails.maritalStatus}
               onChange={(e) => setTempDetails({ ...tempDetails, maritalStatus: e.target.value })}
             >
@@ -156,7 +156,7 @@ export default function PersonalDetailsSection() {
         <Field icon={<Globe size={14} />} label="Nationality">
           {editMode ? (
             <input
-              className="w-full border border-slate-200/80 rounded-lg px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-inter bg-white shadow-sm"
+              className="w-full border border-slate-200/80 rounded-lg px-3.5 py-2.5 text-[14px] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-primary bg-white shadow-sm"
               value={tempDetails.nationality}
               onChange={(e) => setTempDetails({ ...tempDetails, nationality: e.target.value })}
             />
@@ -177,7 +177,7 @@ export default function PersonalDetailsSection() {
             <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center">
               <Languages size={16} className="text-indigo-600" />
             </div>
-            <h3 className="text-[15px] font-semibold text-slate-800 font-inter">Languages</h3>
+            <h3 className="text-[15px] font-semibold text-slate-800 font-primary">Languages</h3>
           </div>
 
           {editMode && (
@@ -188,7 +188,7 @@ export default function PersonalDetailsSection() {
                   { id: Date.now(), name: "", read: false, write: false, speak: false },
                 ])
               }
-              className="flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-700 font-inter px-3 py-1.5 rounded-lg hover:bg-indigo-50 transition-colors"
+              className="flex items-center gap-1.5 text-sm font-medium text-indigo-600 hover:text-indigo-700 font-primary px-3 py-1.5 rounded-lg hover:bg-indigo-50 transition-colors"
             >
               <Plus size={16} />
               Add
@@ -205,7 +205,7 @@ export default function PersonalDetailsSection() {
               {editMode ? (
                 <>
                   <input
-                    className="border border-slate-200/80 rounded-lg px-3.5 py-2 text-[14px] w-40 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 shadow-sm font-inter"
+                    className="border border-slate-200/80 rounded-lg px-3.5 py-2 text-[14px] w-40 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 shadow-sm font-primary"
                     placeholder="Language"
                     value={lang.name}
                     onChange={(e) =>
@@ -216,7 +216,7 @@ export default function PersonalDetailsSection() {
                       )
                     }
                   />
-                  <div className="flex gap-4 text-[13px] font-inter">
+                  <div className="flex gap-4 text-[13px] font-primary">
                     {(["read", "write", "speak"] as const).map((skill) => (
                       <label key={skill} className="flex items-center gap-1.5 capitalize text-slate-600 cursor-pointer">
                         <input
@@ -244,8 +244,8 @@ export default function PersonalDetailsSection() {
                 </>
               ) : (
                 <div className="flex justify-between w-full items-center">
-                  <span className="text-[15px] font-semibold text-slate-800 font-inter">{lang.name}</span>
-                  <span className="text-[13px] text-slate-500 font-medium font-inter">
+                  <span className="text-[15px] font-semibold text-slate-800 font-primary">{lang.name}</span>
+                  <span className="text-[13px] text-slate-500 font-medium font-primary">
                     {[lang.read && "Read", lang.write && "Write", lang.speak && "Speak"].filter(Boolean).join(" · ")}
                   </span>
                 </div>
@@ -269,7 +269,7 @@ function Field({
 }) {
   return (
     <div className="space-y-2">
-      <label className="flex items-center gap-1.5 text-[12px] font-semibold text-slate-500 uppercase tracking-wider font-inter">
+      <label className="flex items-center gap-1.5 text-[12px] font-semibold text-slate-500 uppercase tracking-wider font-primary">
         {icon && <span className="text-slate-400">{icon}</span>}
         {label}
       </label>
@@ -280,7 +280,7 @@ function Field({
 
 function Display({ value }: { value: any }) {
   return (
-    <p className="text-[15px] font-medium text-slate-800 font-inter">
+    <p className="text-[15px] font-medium text-slate-800 font-primary">
       {value || <span className="text-slate-300 italic font-normal">Not specified</span>}
     </p>
   );

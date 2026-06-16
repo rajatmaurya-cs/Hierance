@@ -43,20 +43,20 @@ const CandidateProfileHeader = () => {
         <div className="flex-1 min-w-0 sm:pt-2">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold text-slate-800 font-inter tracking-tight">
+              <h1 className="text-xl sm:text-2xl font-bold text-slate-800 font-primary tracking-tight">
                 {candidate.fullName}
               </h1>
-              <p className="text-[15px] text-slate-500 mt-1 font-inter">
+              <p className="text-[15px] text-slate-500 mt-1 font-primary">
                 {candidate.headline}
               </p>
             </div>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-600 text-xs font-medium flex-shrink-0 font-inter">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-600 text-xs font-medium flex-shrink-0 font-primary">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></span>
               Open to work
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2.5 mt-4 text-[13px] text-slate-500 font-inter">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2.5 mt-4 text-[13px] text-slate-500 font-primary">
             <span className="flex items-center gap-1.5">
               <MapPin size={14} className="text-slate-400" />
               {candidate.location}

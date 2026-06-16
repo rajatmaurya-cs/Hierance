@@ -74,7 +74,7 @@ export default function CompaniesFilterBar({ onFilterChange }: Props) {
   return (
     <div className="w-full bg-white rounded-xl p-4 border border-slate-200 space-y-3">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 font-inter">
+        <div className="flex items-center gap-2 text-sm font-semibold text-slate-700 font-primary">
           <SlidersHorizontal size={15} />
           Filters
         </div>
@@ -116,7 +116,7 @@ export default function CompaniesFilterBar({ onFilterChange }: Props) {
           {activeFilters.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full text-xs font-medium font-inter"
+              className="flex items-center gap-1.5 bg-slate-100 text-slate-700 px-3 py-1.5 rounded-full text-xs font-medium font-primary"
             >
               {item}
               <button
@@ -130,7 +130,7 @@ export default function CompaniesFilterBar({ onFilterChange }: Props) {
 
           <button
             onClick={clearAll}
-            className="text-xs text-red-500 font-medium hover:underline ml-2 font-inter"
+            className="text-xs text-red-500 font-medium hover:underline ml-2 font-primary"
           >
             Clear All
           </button>

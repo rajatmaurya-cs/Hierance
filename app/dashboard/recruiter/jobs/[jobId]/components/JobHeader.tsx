@@ -16,7 +16,7 @@ export default function JobHeader({ jobId }: JobHeaderProps) {
   const formattedTitle = formatJobTitle(jobId);
 
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-jakarta">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-primary">
       <div className="space-y-1.5">
         <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">
           {formattedTitle}

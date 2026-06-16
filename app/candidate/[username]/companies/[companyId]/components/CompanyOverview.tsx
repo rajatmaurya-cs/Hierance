@@ -18,7 +18,7 @@ export default function CompanyOverview({ overview }: CompanyOverviewProps) {
       {/* About */}
       <div>
         <SectionLabel icon={<Info size={15} />} label="About Company" />
-        <p className="text-sm text-slate-600 leading-relaxed mt-2 font-inter">
+        <p className="text-sm text-slate-600 leading-relaxed mt-2 font-primary">
           {overview.shortDescription}
         </p>
       </div>
@@ -27,7 +27,7 @@ export default function CompanyOverview({ overview }: CompanyOverviewProps) {
         {/* Mission */}
         <div>
           <SectionLabel icon={<Target size={15} />} label="Our Mission" />
-          <p className="text-sm text-slate-500 leading-relaxed mt-2 italic border-l-2 border-slate-200 pl-3 font-inter">
+          <p className="text-sm text-slate-500 leading-relaxed mt-2 italic border-l-2 border-slate-200 pl-3 font-primary">
             &ldquo;{overview.mission}&rdquo;
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function CompanyOverview({ overview }: CompanyOverviewProps) {
         {/* Vision */}
         <div>
           <SectionLabel icon={<Eye size={15} />} label="Our Vision" />
-          <p className="text-sm text-slate-500 leading-relaxed mt-2 italic border-l-2 border-slate-200 pl-3 font-inter">
+          <p className="text-sm text-slate-500 leading-relaxed mt-2 italic border-l-2 border-slate-200 pl-3 font-primary">
             &ldquo;{overview.vision}&rdquo;
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function CompanyOverview({ overview }: CompanyOverviewProps) {
         {/* Culture */}
         <div>
           <SectionLabel icon={<Heart size={15} />} label="Company Culture" />
-          <p className="text-sm text-slate-600 leading-relaxed mt-2 font-inter">
+          <p className="text-sm text-slate-600 leading-relaxed mt-2 font-primary">
             {overview.culture}
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function CompanyOverview({ overview }: CompanyOverviewProps) {
         {/* Hiring Process */}
         <div>
           <SectionLabel icon={<ListChecks size={15} />} label="Hiring Process" />
-          <p className="text-sm text-slate-600 leading-relaxed mt-2 font-inter">
+          <p className="text-sm text-slate-600 leading-relaxed mt-2 font-primary">
             {overview.hiringProcess}
           </p>
         </div>
@@ -66,7 +66,7 @@ function SectionLabel({ icon, label }: { icon: React.ReactNode; label: string })
   return (
     <div className="flex items-center gap-2">
       <span className="text-slate-400">{icon}</span>
-      <h3 className="text-sm font-semibold text-slate-700 font-inter">{label}</h3>
+      <h3 className="text-sm font-semibold text-slate-700 font-primary">{label}</h3>
     </div>
   );
 }

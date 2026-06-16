@@ -42,14 +42,14 @@ const CompanyCard = ({
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2.5 min-w-0">
-            <h3 className="text-[15px] font-semibold text-slate-800 truncate font-inter">
+            <h3 className="text-[15px] font-semibold text-slate-800 truncate font-primary">
               {company.name}
             </h3>
-            <span className="flex items-center gap-1 text-xs text-slate-500 flex-shrink-0 font-inter">
+            <span className="flex items-center gap-1 text-xs text-slate-500 flex-shrink-0 font-primary">
               <FaStar size={11} className="text-amber-400" />
               {company.rating}
             </span>
-            <span className="px-2 py-0.5 rounded-full bg-slate-100 text-[10px] font-semibold text-slate-500 uppercase tracking-wide flex-shrink-0 font-inter">
+            <span className="px-2 py-0.5 rounded-full bg-slate-100 text-[10px] font-semibold text-slate-500 uppercase tracking-wide flex-shrink-0 font-primary">
               {company.industry}
             </span>
           </div>
@@ -66,7 +66,7 @@ const CompanyCard = ({
           </button>
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1.5 text-xs text-slate-500 font-inter">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-1.5 text-xs text-slate-500 font-primary">
           <span className="flex items-center gap-1">
             <MapPin size={12} className="text-slate-400" />
             {company.location}
@@ -89,7 +89,7 @@ const CompanyCard = ({
       <Link
         href={`/candidate/${username}/companies/${company.id}`}
         target="_blank"
-        className="flex-shrink-0 px-4 py-2 bg-slate-900 text-white text-xs font-semibold rounded-lg hover:bg-slate-800 transition font-inter"
+        className="flex-shrink-0 px-4 py-2 bg-slate-900 text-white text-xs font-semibold rounded-lg hover:bg-slate-800 transition font-primary"
       >
         View
       </Link>
