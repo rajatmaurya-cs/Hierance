@@ -584,7 +584,7 @@ export default function RecruiterControl() {
   // ── Actions ──
   const handleAction = (action: string, id: string) => {
     if (action === "view") {
-      router.push(`/admin/recruiters/${id}`);
+      router.push(`/admin/users/recruiters/viewProfile/${id}`);
       return;
     }
     setRecruiters((prev) =>
@@ -942,7 +942,26 @@ export default function RecruiterControl() {
 
                     {/* Actions */}
                     <td className="px-6 py-3 text-right">
-                      <ActionMenu recruiter={rec} onAction={handleAction} />
+                      <div className="flex items-center justify-end gap-2">
+                        {rec.status === "ACTIVE" ? (
+                          <button
+                            onClick={() => handleAction("suspend", rec.id)}
+                            className="px-2.5 py-1.5 bg-rose-50 text-rose-600 hover:bg-rose-100 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1 border border-rose-100"
+                          >
+                            <ShieldOff size={12} />
+                            Suspend
+                          </button>
+                        ) : rec.status === "SUSPENDED" ? (
+                          <button
+                            onClick={() => handleAction("unsuspend", rec.id)}
+                            className="px-2.5 py-1.5 bg-emerald-50 text-emerald-600 hover:bg-emerald-100 rounded-lg text-xs font-semibold transition-colors flex items-center gap-1 border border-emerald-100"
+                          >
+                            <ShieldCheck size={12} />
+                            Unsuspend
+                          </button>
+                        ) : null}
+                        <ActionMenu recruiter={rec} onAction={handleAction} />
+                      </div>
                     </td>
                   </tr>
                 );

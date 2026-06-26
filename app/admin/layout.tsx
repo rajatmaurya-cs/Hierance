@@ -22,6 +22,7 @@ import {
   UserCircle,
   Bell,
   Sparkles,
+  GraduationCap,
 } from "lucide-react";
 
 type Props = {
@@ -161,6 +162,7 @@ const AdminPageLayout = ({ children }: Props) => {
           <SectionLabel label="User Base" />
           {navItem("/admin/users/job-seekers", "Job Seekers", Users)}
           {navItem("/admin/users/recruiters", "Recruiters", UserCircle)}
+          {navItem("/admin/users/tutors", "Tutors", GraduationCap)}
           {navItem("/admin/users/admin-management", "Administrators", ShieldCheck)}
 
           <SectionLabel label="Platform" />

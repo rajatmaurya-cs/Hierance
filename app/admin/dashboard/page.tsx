@@ -12,7 +12,6 @@ import RecruiterOverviewPage from "./recruiter/overview/page";
 import RecruiterRevenuePage from "./recruiter/revenue/page";
 import RecruiterAnalyticsPage from "./recruiter/analytics/page";
 import RecruiterNotificationPage from "./recruiter/notifications/page";
-
 // import PlatformOverview from "./components/PlatformOverview";
 
 type Tab = "overview" | "analytics" | "insights" | "revenue" | "notifications";
@@ -101,13 +100,20 @@ const AdminDashboardPage = () => {
 
       {/* Content */}
       <main className="bg-white rounded-xl shadow-sm border border-neutral-200 p-6">
-        {activeTab === "overview" && <RecruiterOverviewPage />}
-
-        {activeTab === "analytics" && <RecruiterAnalyticsPage />}
-
-        {activeTab === "revenue" && <RecruiterRevenuePage />}
-
-        {activeTab === "notifications" && <RecruiterNotificationPage />}
+        {activeRole === "recruiter" && (
+          <>
+            {activeTab === "overview" && <RecruiterOverviewPage />}
+            {activeTab === "analytics" && <RecruiterAnalyticsPage />}
+            {activeTab === "revenue" && <RecruiterRevenuePage />}
+            {activeTab === "notifications" && <RecruiterNotificationPage />}
+          </>
+        )}
+        
+        {activeRole === "candidate" && (
+          <div className="flex items-center justify-center h-64 text-neutral-400">
+            Candidate dashboard under development...
+          </div>
+        )}
       </main>
     </section>
   );
